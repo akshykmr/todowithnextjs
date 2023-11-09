@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const fetchTodo = async (): Promise<Todo[]> => { //  type annotations : RETURING ARRAY 
   const res = await fetch("https://jsonplaceholder.typicode.com/todos/");
-  const todos: Todo[] = await res.json();
+  const todos: Todo[] = await res.json(); // using Todo[] coz res is in array form 
   return todos;
 };
 
@@ -16,7 +16,7 @@ const TodoList = async () => {
     <>
       {todos.map((todo) => (
         <p key={todo.id}>
-          <Link href={`/todos/${todo.id}`}>Todo:{todo.id}</Link>
+          <Link href={`/todoList/${todo.id}`}>Todo:{todo.id}</Link>
         </p>
       ))}
     </>
