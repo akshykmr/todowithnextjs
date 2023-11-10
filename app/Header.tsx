@@ -6,8 +6,8 @@ const Header = () => {
     <header className='p-5 backdrop-blur-lg border-2 bg-cyan-900 flex flex-row gap-4 '>
       {/* <button>{"<- back"}</button> */}
       <Link href="/">{"<- back"}</Link>
-      <p>HEADER</p>
-      <Link href="/todoList">{"Todo"}</Link>
+      <Link href="/todoList">Todo</Link>
+      <Link href="/search">Google Search</Link>
     </header>
   )
 }

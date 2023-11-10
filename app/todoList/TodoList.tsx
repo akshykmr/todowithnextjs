@@ -16,7 +16,7 @@ const TodoList = async () => {
     <>
       {todos.map((todo) => (
         <p key={todo.id}>
-          <Link href={`/todoList/${todo.id}`}>Todo:{todo.id}</Link>
+          <Link href={`/todoList/${todo.id}`}>Todo:{todo.id}</Link>  {/* THIS WILL BE REDIRECTED TO ITS LEAF NODE : /todoList/id */}
         </p>
       ))}
     </>
