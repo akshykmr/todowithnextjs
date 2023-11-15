@@ -1,8 +1,22 @@
+import React, {Suspense }from 'react';
+import TodosList from './todoList/TodoList';
+
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-    <p className='text-red-500'>HOME PAGE</p>
-    </main>
+    <div className="flex flex-col space-y-10">
+    <Suspense fallback={<p>Loading the Todos ...</p>}>   {/* Here we are rendering a light weight fallback component while data is loading */}
+    <div className="flex space-x-2 flex-wrap">
+    {/* @ts-ignore */}
+    <TodosList />
+    </div>
+    </Suspense>
+    <Suspense fallback={<p>Loading the Todos ...</p>}>
+    <div className="flex space-x-2 flex-wrap">
+    {/* @ts-ignore */}
+    <TodosList />
+    </div>
+    </Suspense>
+    </div>
   )
 }
